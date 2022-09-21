@@ -1,0 +1,16 @@
+﻿@page "/"
+@inject IHttpContextAccessor HttpContextAccessor
+
+
+<PageTitle>Index</PageTitle>
+
+@{
+    var requestCookies = HttpContextAccessor.HttpContext.Request.Cookies.ToList();
+    var responseCookies = HttpContextAccessor.HttpContext.Response.Cookies;
+}
+
+<h1>Hello, world! Name: @HttpContextAccessor.HttpContext.User.Identity?.Name</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?"/>

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth-Microservice", "Auth-Microservice\Auth-Microservice.csproj", "{FBEC9C40-F5CE-453D-A3CA-BA66D1F8D831}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth-Frontend", "Auth-Frontend\Auth-Frontend.csproj", "{34E7F260-9D73-45BB-ADA5-A3F475ADFB75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GIT", "GIT", "{328E3CFD-247C-48A3-81A7-865B325F417F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBEC9C40-F5CE-453D-A3CA-BA66D1F8D831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBEC9C40-F5CE-453D-A3CA-BA66D1F8D831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBEC9C40-F5CE-453D-A3CA-BA66D1F8D831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBEC9C40-F5CE-453D-A3CA-BA66D1F8D831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E7F260-9D73-45BB-ADA5-A3F475ADFB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E7F260-9D73-45BB-ADA5-A3F475ADFB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E7F260-9D73-45BB-ADA5-A3F475ADFB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E7F260-9D73-45BB-ADA5-A3F475ADFB75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

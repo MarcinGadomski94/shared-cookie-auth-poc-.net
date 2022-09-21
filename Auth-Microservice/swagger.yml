@@ -1,0 +1,114 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Auth microservice"
+basePath: "/"
+tags:
+  - name: "auth"
+schemes:
+  - "https"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+paths:
+  /login:
+    post:
+      tags:
+        - auth
+      operationId: Login
+      description: Logs user into system
+      parameters:
+        - name: loginRequest
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/LoginRequest"
+      responses:
+        200:
+          description: Login successful
+        401:
+          description: Unauthroized
+  /register:
+    post:
+      tags:
+        - auth
+      operationId: Register
+      description: Registers user into system
+      parameters:
+        - name: loginRequest
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/LoginRequest"
+      responses:
+        201:
+          description: Registration successful
+        400:
+          description: Bad request
+  /changePassword:
+    get:
+      tags:
+        - auth
+      operationId: ChangePasswordToken
+      description: Gets token for changing the password
+      parameters:
+        - name: userName
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: Returns change password token
+          schema:
+            type: string
+        404:
+          description: User not found
+    post:
+      tags:
+        - auth
+      operationId: ChangePassword
+      description: Changes password of specified user
+      parameters:
+        - name: changePasswordRequest
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/ChangePasswordRequest"
+      responses:
+        200:
+          description: Change password successful
+        404:
+          description: User not found
+        400:
+          description: Bad request
+  /logout:
+    get:
+      tags:
+        - auth
+      operationId: Logout
+      description: Logs out the user from the system
+      responses:
+        200:
+          description: Logged out successfully
+
+definitions:
+  LoginRequest:
+    type: object
+    properties:
+      UserName:
+        type: string
+      Password:
+        type: string
+  ChangePasswordRequest:
+    type: object
+    properties:
+      UserName:
+        type: string
+      OldPassword:
+        type: string
+      NewPassword:
+        type: string
+      Token:
+        type: string
